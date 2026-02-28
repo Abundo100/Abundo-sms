@@ -1,4 +1,31 @@
-<<<<<<< HEAD
+# Scholarship Management System
+
+## Project Feature List
+
+### Main Features
+- User Authentication
+- Scholarship Management
+- Application Processing
+- Admin Management
+- Student Portal
+
+### Sub-features
+- Registration
+- Login/Logout
+- Scholarship Posting
+- Application Submission
+- Approval/Rejection System
+- Status Tracking
+
+### Actions
+- Create scholarship
+- Edit scholarship
+- Delete scholarship
+- Apply scholarship
+- Review applications
+- Approve/Reject applications
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -65,6 +92,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# Abundo-sms
->>>>>>> 1336ac36f530447cdb189c7f94b0774341ddc766
