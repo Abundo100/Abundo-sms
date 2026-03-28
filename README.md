@@ -1,6 +1,6 @@
 # Scholarship Management System (SMS)
 
-**Developer:** Marcjan Villariasa
+**Developer:** Abundo, Cristy Jr N.
 
 ---
 
