@@ -7,59 +7,32 @@ use Illuminate\Http\Request;
 
 class ScholarshipController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // GET /api/scholarships
     public function index()
     {
-        //
+        return response()->json(Scholarship::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
+    // POST /api/scholarships
     public function store(Request $request)
     {
-        //
+        $scholarship = Scholarship::create($request->all());
+        return response()->json($scholarship, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Scholarship $scholarship)
+    // PUT /api/scholarships/{id}
+    public function update(Request $request, $id)
     {
-        //
+        $scholarship = Scholarship::findOrFail($id);
+        $scholarship->update($request->all());
+        return response()->json($scholarship);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Scholarship $scholarship)
+    // DELETE /api/scholarships/{id}
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Scholarship $scholarship)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Scholarship $scholarship)
-    {
-        //
+        $scholarship = Scholarship::findOrFail($id);
+        $scholarship->delete();
+        return response()->json(['message' => 'Deleted successfully']);
     }
 }
