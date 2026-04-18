@@ -1,6 +1,6 @@
 <div align="center">
 
-<div style="background-color: #ffffff; border-radius: 16px; padding: 50px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #e1e8ed; max-width: 900px; margin: 20px auto;">
+ <div style="background-color: #ffffff; border-radius: 16px; padding: 50px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #e1e8ed; max-width: 900px; margin: 20px auto;">
   <div style="font-size: 55px; margin-bottom: 10px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">🏢</div>
   <h1 style="color: #1a1a1a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 40px; font-weight: 700; margin: 0; letter-spacing: -1px;">Scholarship Management <span style="color: #3b82f6;">Portal</span></h1>
   <p style="color: #657786; font-size: 18px; margin-top: 10px; font-family: -apple-system, system-ui, sans-serif;">A secure, structured API handler for educational grant administration.</p>
@@ -86,7 +86,7 @@
 | | Program Lifecycle Update | `PUT/PATCH` | ✅ |
 | **Applicants** | Student Profile Submission | `POST` | ✅ |
 | | Eligibility Status Review | `PATCH` | ✅ |
-| **Reports** | Data Aggregation Summaries | `GET` | 🚧 |
+| ***Reports** | Data Aggregation Summaries | `GET` | 🚧 |
 
 ---
 
