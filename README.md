@@ -13,17 +13,17 @@
 </div>
 
 <p>
-  <a href="https://github.com/lecciones/Lecciones_Laravel1-IPT209">
+  <a href="https://github.com/Abundo100/Abundo-Crisity-Jr-N.git">
     <img src="https://img.shields.io/badge/Developer-Jay_Ric_G._Lecciones-white?style=flat&logo=github&logoColor=181717&labelColor=f5f8fa&color=e1e8ed" alt="Developer" />
   </a>
   <img src="https://img.shields.io/badge/Course-BSIT_2D-white?style=flat&logo=googleclassroom&logoColor=5f6368&labelColor=f5f8fa&color=e1e8ed" alt="Course" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/lecciones/Lecciones_Laravel1-IPT209">
+  <a href="https://github.com/Abundo100/Abundo-Crisity-Jr-N.git">
     <img src="https://img.shields.io/badge/VIEW_CODE-333?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://www.postman.com/leccionesjayric-9321815/workspace/jay-ric-lecciones-s-workspace/collection/53548851-fe1acfe2-2c9d-474d-9fa8-a293aaf1d45f">
+  <a href="https://www.postman.com/abundo100-7304378/workspace/cristy-abundo-s-workspace/folder/52790974-601b2dc2-a842-4d60-ab6c-ff053acc7a07?action=share&creator=52790974">
     <img src="https://img.shields.io/badge/API_DOCS-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
   </a>
 </p>
@@ -165,7 +165,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=1a1a1a&height=80&section=footer" width="100%" />
 
-**© 2026 Jay Ric G. Lecciones**
+**© 2026 Cristy Jr. N. Abundo**
 *Enterprise Scholarship Management Solution*
 
 </div>
