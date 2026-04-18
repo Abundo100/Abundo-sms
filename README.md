@@ -46,7 +46,7 @@
     </tr>
     <tr>
       <td style="padding: 15px; border-bottom: 1px solid #e1e8ed; color: #1a1a1a;"><strong>Lead Developer</strong></td>
-      <td style="padding: 15px; border-bottom: 1px solid #e1e8ed; color: #1a1a1a;">Jay Ric Lecciones</td>
+      <td style="padding: 15px; border-bottom: 1px solid #e1e8ed; color: #1a1a1a;">Cristy Jr. N Abundo</td>
     </tr>
     <tr>
       <td style="padding: 15px; color: #1a1a1a;"><strong>Core Framework</strong></td>
