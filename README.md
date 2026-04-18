@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
  <div style="background-color: #ffffff; border-radius: 16px; padding: 50px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #e1e8ed; max-width: 900px; margin: 20px auto;">
@@ -169,3 +170,7 @@
 *Enterprise Scholarship Management Solution*
 
 </div>
+=======
+
+
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451

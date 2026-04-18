@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Scholarship;
+<<<<<<< HEAD
 use App\Models\Applicant;
+=======
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
 
 class ScholarshipController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
         // Get all scholarships without the accessor
         $scholarships = Scholarship::all();
+=======
+        // We include 'remaining_slots' which you defined in your model
+        $scholarships = Scholarship::all()->append('remaining_slots');
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
         
         return response()->json([
             'success' => true,
@@ -28,7 +36,11 @@ class ScholarshipController extends Controller
             'slots'       => 'required|integer|min:1',
             'amount'      => 'required|numeric',
             'deadline'    => 'required|date',
+<<<<<<< HEAD
             'status'      => 'required|string|in:Active,Inactive,Closed',
+=======
+            'status'      => 'required|string|in:Active,Inactive,Closed', // Restricting to valid statuses
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
         ]);
 
         $scholarship = Scholarship::create($validated);
@@ -48,6 +60,7 @@ class ScholarshipController extends Controller
             return response()->json(['message' => 'Scholarship not found'], 404);
         }
 
+<<<<<<< HEAD
         // Calculate applicant count and remaining slots
         $applicantCount = Applicant::where('scholarship_id', $id)->count();
         $remainingSlots = $scholarship->slots - $applicantCount;
@@ -57,6 +70,11 @@ class ScholarshipController extends Controller
             'data' => $scholarship,
             'total_applicants' => $applicantCount,
             'remaining_slots' => $remainingSlots
+=======
+        return response()->json([
+            'success' => true,
+            'data'    => $scholarship->append('remaining_slots')
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
         ], 200);
     }
 
@@ -69,6 +87,7 @@ class ScholarshipController extends Controller
         }
 
         $validated = $request->validate([
+<<<<<<< HEAD
             'name'        => 'sometimes|string|max:255',
             'description' => 'sometimes|string',
             'provider'    => 'sometimes|string|max:255',
@@ -76,6 +95,15 @@ class ScholarshipController extends Controller
             'amount'      => 'sometimes|numeric',
             'deadline'    => 'sometimes|date',
             'status'      => 'sometimes|string|in:Active,Inactive,Closed',
+=======
+            'name'        => 'string|max:255',
+            'description' => 'string',
+            'provider'    => 'string|max:255',
+            'slots'       => 'integer|min:1',
+            'amount'      => 'numeric',
+            'deadline'    => 'date',
+            'status'      => 'string|in:Active,Inactive,Closed',
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
         ]);
 
         $scholarship->update($validated);
@@ -102,6 +130,7 @@ class ScholarshipController extends Controller
             'message' => 'Scholarship deleted successfully'
         ], 200);
     }
+<<<<<<< HEAD
 
     /**
      * Get all applicants for a specific scholarship
@@ -247,4 +276,6 @@ class ScholarshipController extends Controller
             ]
         ], 200);
     }
+=======
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
 }

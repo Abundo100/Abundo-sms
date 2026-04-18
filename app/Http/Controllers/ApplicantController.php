@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Applicant;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 
 class ApplicantController extends Controller
@@ -61,10 +62,42 @@ class ApplicantController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Application submitted successfully! Awaiting admin approval.',
+=======
+
+class ApplicantController extends Controller
+{
+    public function index()
+    {
+        $applicants = Applicant::all();
+        return response()->json([
+            'success' => true,
+            'data' => $applicants
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email|unique:applicants',
+            'phone' => 'required|string|max:20',
+            'address' => 'nullable|string',
+            'course' => 'nullable|string|max:255',
+            'year_level' => 'nullable|string|max:50',
+            'status' => 'nullable|in:pending,approved,rejected'
+        ]);
+
+        $applicant = Applicant::create($request->all());
+        return response()->json([
+            'success' => true,
+            'message' => 'Applicant created successfully',
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
             'data' => $applicant
         ], 201);
     }
 
+<<<<<<< HEAD
     /**
      * Get single applicant (with permission check)
      * GET /api/applicants/{id}
@@ -73,12 +106,18 @@ class ApplicantController extends Controller
     {
         $applicant = Applicant::with('scholarship')->find($id);
         
+=======
+    public function show($id)
+    {
+        $applicant = Applicant::with(['applications', 'documents'])->find($id);
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
         if (!$applicant) {
             return response()->json([
                 'success' => false,
                 'message' => 'Applicant not found'
             ], 404);
         }
+<<<<<<< HEAD
         
         // Check permission: Admin can view any, Student can only view their own
         if (Auth::user()->role_id != 1) {
@@ -105,12 +144,24 @@ class ApplicantController extends Controller
     {
         $applicant = Applicant::find($id);
         
+=======
+        return response()->json([
+            'success' => true,
+            'data' => $applicant
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $applicant = Applicant::find($id);
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
         if (!$applicant) {
             return response()->json([
                 'success' => false,
                 'message' => 'Applicant not found'
             ], 404);
         }
+<<<<<<< HEAD
         
         // Check permission
         if (Auth::user()->role_id != 1) {
@@ -153,10 +204,15 @@ class ApplicantController extends Controller
         $applicant->update($validated);
         $applicant->load('scholarship');
 
+=======
+
+        $applicant->update($request->all());
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
         return response()->json([
             'success' => true,
             'message' => 'Applicant updated successfully',
             'data' => $applicant
+<<<<<<< HEAD
         ], 200);
     }
 
@@ -168,12 +224,21 @@ class ApplicantController extends Controller
     {
         $applicant = Applicant::find($id);
         
+=======
+        ]);
+    }
+
+    public function destroy($id)
+    {
+        $applicant = Applicant::find($id);
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
         if (!$applicant) {
             return response()->json([
                 'success' => false,
                 'message' => 'Applicant not found'
             ], 404);
         }
+<<<<<<< HEAD
         
         // Check permission
         if (Auth::user()->role_id != 1) {
@@ -520,5 +585,12 @@ class ApplicantController extends Controller
                 'failed' => $failed
             ]
         ], 200);
+=======
+        $applicant->delete();
+        return response()->json([
+            'success' => true,
+            'message' => 'Applicant deleted successfully'
+        ]);
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
     }
 }

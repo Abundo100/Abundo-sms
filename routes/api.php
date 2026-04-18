@@ -10,7 +10,11 @@ use App\Http\Controllers\RequirementController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ReportController;
+<<<<<<< HEAD
 use App\Http\Controllers\StudentController;
+=======
+use App\Http\Controllers\StudentController; // Ensure this is imported
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +22,7 @@ use App\Http\Controllers\StudentController;
 |--------------------------------------------------------------------------
 */
 
+<<<<<<< HEAD
 // Public routes (no authentication required)
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -87,6 +92,29 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('documents', DocumentController::class);
     
     // ========== REPORTS ==========
+=======
+// Public routes
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+
+// Protected routes
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout']);
+    
+    // Fixed the typo here: removed the stray 'a' after AuthController::class, 'user'
+    Route::get('/user', [AuthController::class, 'user']);
+
+    // Resource routes
+    Route::apiResource('users', UserController::class);
+    Route::apiResource('students', StudentController::class); // ADDED THIS
+    Route::apiResource('applicants', ApplicantController::class);
+    Route::apiResource('scholarships', ScholarshipController::class);
+    Route::apiResource('requirements', RequirementController::class);
+    Route::apiResource('applications', ApplicationController::class);
+    Route::apiResource('documents', DocumentController::class);
+
+    // Reports
+>>>>>>> 3789cedb9a592f7d3901a78aaeb1ba123778b451
     Route::get('/reports/applicants', [ReportController::class, 'applicantReport']);
     Route::get('/reports/scholarships', [ReportController::class, 'scholarshipReport']);
     Route::get('/reports/approved', [ReportController::class, 'approvedScholars']);
